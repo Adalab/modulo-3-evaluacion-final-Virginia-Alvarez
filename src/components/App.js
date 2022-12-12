@@ -4,11 +4,13 @@ import callToApi from '../services/api';
 import { useEffect, useState} from 'react';
 import ls from '../services/localstorage';
 import CharacterList from './CharacterList';
-import CharacterItem from './CharacterItem';
+import Filters from './Filters';
 
 function App() {
   // VARIABLES ESTADO
   const [dataCharacter,setDataCharacter] = useState([]);
+  const [filterName, setFilterName] = useState ('');
+
 
   // USEEFFECT ?
 
@@ -25,9 +27,15 @@ function App() {
   }, []);
 
   // FUNCIONES HANDLER
+  const handleFilterName = (ev) =>{
+    setFilterName(ev.target.value)
+  };
 
   // FUNCIONES Y VARIABLES QUE AYUDEN A RENDERIZAR HTML
-  const filteredCharacters = dataCharacter;
+  const filteredCharacters = dataCharacter
+    .filter(dataCharacter =>{
+      return dataCharacter.name.toUpperCase().includes(filterName.toUpperCase());
+    });
 
   // HTML EN EL RETURN
 
@@ -38,6 +46,7 @@ function App() {
       </header>
       <main>
         <CharacterList characters = {filteredCharacters}/>
+        <Filters filterName={filterName} handleFilterName={handleFilterName} />
 
 
 
