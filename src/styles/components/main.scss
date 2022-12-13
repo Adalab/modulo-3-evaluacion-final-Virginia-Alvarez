@@ -1,0 +1,107 @@
+.main{
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    list-style: none;
+}
+.itemList{
+    background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+    width: 170px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    border: solid  black;
+    line-height: 25px;
+    cursor: pointer;
+    transition: all 100ms cubic-beizer(0.175, 0.885, 0.32, 1.275);
+}
+.itemList:hover{
+    box-shadow: 0px -6px 10px rgba(233, 235, 208, 0.781),
+    0px 4px 15px rgba(222, 223, 211, 0.897);
+    
+ }
+.image{
+    width: 150px;
+    border-radius: 75px
+}
+.containerFilters{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: sticky;
+    // border: solid #CCDBDC;
+    padding: 10px;
+    height: 600px;
+    gap:5px;
+}
+.labelName{
+    // color: #80CED7;
+    background: #15CFC9;
+    background: linear-gradient(to right, #15CFC9 0%, #5FCF5B 100%);
+    background-clip: text;
+    color: transparent;
+    margin-top: 5px;
+}
+.inputName{
+   
+    font-family: inherit;
+    width: 32%;
+    border: 0;
+    border-bottom: 2px solid #15CFC9 ;
+    outline: 0;
+    font-size: 1rem;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+   
+  
+    &::placeholder {
+      color: rgba(168, 175, 180, 0.638);
+}
+}
+.character{
+    text-decoration: none;
+    color:white
+}
+
+.itemDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    background-color: red;
+    height: 400px;
+    left: 50%;
+}
+
+// .select{
+//     width:200px;
+//     margin:0.5em ;
+//     position:relative;
+//     text-align: left;
+//     cursor: pointer;  
+//     color: #CCDBDC;
+//     text-shadow: 0 1px 0 #CCDBDC;
+//     border-image: linear-gradient(to left, #007EA7, #CCDBDC) 1 0;
+//     transition: all 250ms ease-in-out;
+//     background-color: white;
+//     border-bottom: 1px solid #CCDBDC;
+ 
+// }
+// .select option{
+//     margin: 40px;
+//     background: white;
+//     color: #fff;
+// }

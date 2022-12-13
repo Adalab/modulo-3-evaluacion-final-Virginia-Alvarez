@@ -1,3 +1,4 @@
+import Cartoon from "./Cartoon";
 import FilterName from "./FilterName";
 
 const Filters =(props) =>{
@@ -6,9 +7,10 @@ const Filters =(props) =>{
     }
     return(
         <section>
-            <form onSubmit ={handleSubmit} > 
+            <form className='containerFilters' onSubmit ={handleSubmit} > 
                 <FilterName filterName={props.filterName} handleFilterName = {props.handleFilterName}/>
             </form>
+            <Cartoon/>
         </section>
 )
 

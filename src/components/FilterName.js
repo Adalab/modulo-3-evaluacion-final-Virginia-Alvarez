@@ -5,15 +5,16 @@ const FilterName = (props) =>{
     };
     return (
         <>
-         <label >Filtar por Nombre:</label>
+            <label className="labelName" >Filtar por Nombre:</label>
             <input 
                 type="text" 
                 name="name"
                 id= "name"
                 value={props.filterName}
                 onChange = {handleChange}
-            
-          />
+                className="inputName"
+                placeholder ="Ej: Morty"  
+            />
         </>
 
     )

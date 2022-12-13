@@ -14,8 +14,8 @@ const CharacterList =(props)=>{
         )
     } else {
         return (
-            <section className=''>
-                <p className=''>No se han encontrado resultados para la búsqueda</p>
+            <section className='container'>
+                <p className='paragrpah'>No se han encontrado resultados para la búsqueda</p>
             </section>
         )
     }

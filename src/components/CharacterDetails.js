@@ -3,31 +3,31 @@ import { Link,useParams } from "react-router-dom";
 const CharacterDeatils = (props) =>{
     const {characterId} = useParams();
     const character = props.characters.find(character =>{
-        return character.id === characterId;
+        return character.id === parseInt(characterId);
     });
 
     if(character){
         return (
             <div>
-                <Link to='/'>Volver</Link>
-                <section>
+                <Link className="character" to='/'>Volver</Link>
+                <section className="itemDetails">
                     <img
-                        src={props.character.image}
-                        alt={`Foto de ${props.character.name}`}
-                        className=""
+                        src={character.image}
+                        alt={`Foto de ${character.name}`}
+                        className="imageDetail"
                     />
-                    <h2>{props.character.name}</h2>
-                    <p>{props.character.status}</p>
-                    <p>{props.character.species}</p>
-                    <p>{props.character.origin}</p>
-                    <p>{props.character.totalEpisodes}</p>
+                    <h2 className="nameDetail">{character.name}</h2>
+                    <p className="paragraphDetail">{character.status}</p>
+                    <p className="paragraphDetail">{character.species}</p>
+                    <p className="paragraphDetail">{character.origin}</p>
+                    <p className="paragraphDetail">{character.totalEpisodes}</p>
                 </section>
             </div>
         );  
     } else {
         return (
             <div>
-                <Link to='/'>Volver</Link>
+                <Link className="character" to='/'>Volver</Link>
                 <h2>No se ha encontrado el personaje{character}</h2>
             </div>
         )

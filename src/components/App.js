@@ -1,4 +1,5 @@
 import '../styles/App.scss';
+import logo from '../images/titulo.jpeg';
 import callToApi from '../services/api';
 import {Routes, Route} from 'react-router-dom';
 import { useEffect, useState} from 'react';
@@ -16,11 +17,11 @@ function App() {
   // USEEFFECT ?
 
   useEffect(() =>{
-    const cacheValue =ls.get('character');
+    const cacheValue =ls.get('data');
     if(!cacheValue){
       callToApi().then((cleanData) => {     
           setDataCharacter(cleanData);
-          ls.set('data', dataCharacter);      
+          ls.set('data', cleanData);      
       });
     }else{
       setDataCharacter(cacheValue);
@@ -43,9 +44,9 @@ function App() {
   return (
     <div className="App">
        <header className="header">
-        <h1 className="title">Ricky y Morty</h1>
+        <img className="title" src={logo} alt="Rick and Morty" />
       </header>
-      <main>
+      <main className='main'>
         <Routes>
           <Route 
             path='/'
@@ -56,10 +57,14 @@ function App() {
               </>
             }
           />
-        <Route path='/character/:characterId' element={<CharacterDeatils/>} />  
-        </Routes>
-        
+        <Route path='/character/:characterId' element={<CharacterDeatils characters={dataCharacter}/>} />  
+        </Routes>  
       </main>
+      <footer className='footer'>
+        <p className='blue'>Ev.Final Virginia Álvarez   &copy;Adalab</p>
+        <p className='blue'> Si, bienvenido al club, amigo</p>
+      </footer>
+      
 
       
     </div>
