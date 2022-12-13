@@ -1,4 +1,5 @@
 import { Link,useParams } from "react-router-dom";
+import Morty from "./Morty";
 
 const CharacterDeatils = (props) =>{
     const {characterId} = useParams();
@@ -8,28 +9,33 @@ const CharacterDeatils = (props) =>{
 
     if(character){
         return (
-            <div>
-                <Link className="character" to='/'>Volver</Link>
-                <section className="itemDetails">
-                    <img
-                        src={character.image}
-                        alt={`Foto de ${character.name}`}
-                        className="imageDetail"
-                    />
-                    <h2 className="nameDetail">{character.name}</h2>
-                    <p className="paragraphDetail">{character.status}</p>
-                    <p className="paragraphDetail">{character.species}</p>
-                    <p className="paragraphDetail">{character.origin}</p>
-                    <p className="paragraphDetail">{character.totalEpisodes}</p>
-                </section>
-            </div>
+            <>
+                <div className="characterContainer">
+                    <Link className="character" to='/'>Volver</Link>
+                    <section className="itemDetails">
+                        <img
+                            src={character.image}
+                            alt={`Foto de ${character.name}`}
+                            className="imageDetail" />
+                        <h2 className="nameDetail">{character.name}</h2>
+                        <p className="paragraphDetail">{character.status}</p>
+                        <p className="paragraphDetail">{character.species}</p>
+                        <p className="paragraphDetail">{character.origin}</p>
+                        <p className="paragraphDetail">{character.totalEpisodes}</p>
+                    </section>
+                </div>
+                <Morty />
+            </>
         );  
     } else {
         return (
-            <div>
-                <Link className="character" to='/'>Volver</Link>
-                <h2>No se ha encontrado el personaje{character}</h2>
-            </div>
+            <>
+                <div>
+                    <Link className="character" to='/'>Volver</Link>
+                    <h2>No se ha encontrado el personaje{character}</h2>
+                </div>
+                <Morty />
+            </>
         )
     }
 };

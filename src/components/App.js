@@ -10,8 +10,9 @@ import CharacterDeatils from './CharacterDetails';
 
 function App() {
   // VARIABLES ESTADO
-  const [dataCharacter,setDataCharacter] = useState([]);
+  const [dataCharacters,setDataCharacters] = useState([]);
   const [filterName, setFilterName] = useState ('');
+  const [filterSpecie, setFilterSpecie] = useState('All');
 
 
   // USEEFFECT ?
@@ -20,11 +21,11 @@ function App() {
     const cacheValue =ls.get('data');
     if(!cacheValue){
       callToApi().then((cleanData) => {     
-          setDataCharacter(cleanData);
+          setDataCharacters(cleanData);
           ls.set('data', cleanData);      
       });
     }else{
-      setDataCharacter(cacheValue);
+      setDataCharacters(cacheValue);
     }
   }, []);
 
@@ -33,11 +34,23 @@ function App() {
     setFilterName(ev.target.value)
   };
 
+  const handleFilterSpecie = (value) =>{
+    setFilterSpecie(value)
+  };
+
   // FUNCIONES Y VARIABLES QUE AYUDEN A RENDERIZAR HTML
-  const filteredCharacters = dataCharacter
-    .filter(dataCharacter =>{
-      return dataCharacter.name.toUpperCase().includes(filterName.toUpperCase());
+  const filteredCharacters = dataCharacters
+    .filter((character) =>{
+      return character.name.toUpperCase().includes(filterName.toUpperCase());
+    })
+    .filter((character) =>{
+      if(filterSpecie === 'All'){
+        return true;
+      }else {
+        return character.specie === filterSpecie
+      }
     });
+
 
   // HTML EN EL RETURN
 
@@ -52,12 +65,12 @@ function App() {
             path='/'
             element ={
               <>
-                <Filters filterName={filterName} handleFilterName={handleFilterName} />
+                <Filters filterName={filterName} handleFilterName={handleFilterName} filterSpecie={filterSpecie} handleFilterSpecie={handleFilterSpecie}/>
                 <CharacterList characters = {filteredCharacters}/>
               </>
             }
           />
-        <Route path='/character/:characterId' element={<CharacterDeatils characters={dataCharacter}/>} />  
+        <Route path='/character/:characterId' element={<CharacterDeatils characters={dataCharacters}/>} />  
         </Routes>  
       </main>
       <footer className='footer'>

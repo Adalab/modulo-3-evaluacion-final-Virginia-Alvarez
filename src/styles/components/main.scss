@@ -1,9 +1,14 @@
+body {
+    height: 100vh;
+    background-color: black;
+}
+
 .main{
     display: grid;
     grid-template-columns:1fr 2fr;
-    background-color: black;
     padding-top: 20px;
     padding-bottom: 30px;
+    height: 100%;
 }
 .list{
     display: flex;
@@ -35,15 +40,22 @@
 }
 .containerFilters{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: baseline;
     position: sticky;
     // border: solid #CCDBDC;
     padding: 10px;
-    height: 600px;
     gap:5px;
 }
+
+.sectionFilters{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .labelName{
     // color: #80CED7;
     background: #15CFC9;
@@ -73,6 +85,14 @@
 .character{
     text-decoration: none;
     color:white
+}
+
+.characterContainer{
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto;
 }
 
 .itemDetails{

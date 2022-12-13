@@ -23,11 +23,25 @@
     drop-shadow(-2px 0 0 var(--border-color));
 }
 
-.container {
+.cartoonContainerRick {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
+  position: fixed;
+  bottom: -50px;
+}
+
+.cartoonContainerMorty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: -30px;
+  left: 50px
 }
 
 .rick-container {
