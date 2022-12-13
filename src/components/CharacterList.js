@@ -6,11 +6,19 @@ const CharacterList =(props)=>{
         
         return <CharacterItem key={character.id} character={character}/>;
     });
-    return(
-        <section className='container'>
-            <ul className='list'>{characterElements}</ul>
-        </section>
-    )
+    if (characterElements && characterElements.length >0){
+        return(
+            <section className='container'>
+                <ul className='list'>{characterElements}</ul>
+            </section>
+        )
+    } else {
+        return (
+            <section className=''>
+                <p className=''>No se han encontrado resultados para la búsqueda</p>
+            </section>
+        )
+    }
     };
 
 export default CharacterList;

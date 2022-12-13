@@ -7,7 +7,10 @@ const callToApi = ()=>{
                 id: character.id,
                 image: character.image,
                 name: character.name,
-                specie: character.species
+                specie: character.species,
+                status: character.status,
+                origin: character.origin.name,
+                totalEpisodes: character.episode.length  //character.episode ? character.episode.length : 0
             }
         });
         return cleanData.sort(

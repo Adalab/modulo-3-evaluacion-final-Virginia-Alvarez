@@ -1,7 +1,6 @@
 const FilterName = (props) =>{
     
-    const handleSubmit = (ev) =>{
-        ev.preventDefault()
+    const handleChange = (ev) =>{
         props.handleFilterName(ev);
     };
     return (
@@ -12,7 +11,7 @@ const FilterName = (props) =>{
                 name="name"
                 id= "name"
                 value={props.filterName}
-                onChange = {handleSubmit}
+                onChange = {handleChange}
             
           />
         </>

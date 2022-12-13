@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CharacterItem = (props) =>{
     return (
         <li className='item'>
@@ -8,6 +10,7 @@ const CharacterItem = (props) =>{
         />
         <h2>{props.character.name}</h2>
         <p>{props.character.species}</p>
+        <Link to ={`/character/${props.character.id}`}>Ver personaje</Link>
     </li>
     )
 }

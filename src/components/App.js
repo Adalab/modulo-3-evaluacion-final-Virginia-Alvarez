@@ -1,10 +1,11 @@
 import '../styles/App.scss';
 import callToApi from '../services/api';
-// import {Routes, Route, Link, NavLink} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import { useEffect, useState} from 'react';
 import ls from '../services/localstorage';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
+import CharacterDeatils from './CharacterDetails';
 
 function App() {
   // VARIABLES ESTADO
@@ -45,11 +46,19 @@ function App() {
         <h1 className="title">Ricky y Morty</h1>
       </header>
       <main>
-        <CharacterList characters = {filteredCharacters}/>
-        <Filters filterName={filterName} handleFilterName={handleFilterName} />
-
-
-
+        <Routes>
+          <Route 
+            path='/'
+            element ={
+              <>
+                <Filters filterName={filterName} handleFilterName={handleFilterName} />
+                <CharacterList characters = {filteredCharacters}/>
+              </>
+            }
+          />
+        <Route path='/character/:characterId' element={<CharacterDeatils/>} />  
+        </Routes>
+        
       </main>
 
       
