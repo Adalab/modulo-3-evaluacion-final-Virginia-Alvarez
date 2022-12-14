@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.9b252951.css",
-    "main.js": "./static/js/main.807ed335.js",
+    "main.css": "./static/css/main.19f9d383.css",
+    "main.js": "./static/js/main.4d3e4790.js",
     "static/media/characterNotFound.png": "./static/media/characterNotFound.b9a3c35845ce07b64d17.png",
     "static/media/notFound.png": "./static/media/notFound.84dbcdf22c9ddf5c713c.png",
     "static/media/titulo.jpeg": "./static/media/titulo.d0f120d1af31f4b314aa.jpeg",
@@ -9,11 +9,11 @@
     "static/media/Photos.png": "./static/media/Photos.2487d770805167e57858.png",
     "static/media/Among-Us.png": "./static/media/Among-Us.0364ef07c0528fac2dd2.png",
     "index.html": "./index.html",
-    "main.9b252951.css.map": "./static/css/main.9b252951.css.map",
-    "main.807ed335.js.map": "./static/js/main.807ed335.js.map"
+    "main.19f9d383.css.map": "./static/css/main.19f9d383.css.map",
+    "main.4d3e4790.js.map": "./static/js/main.4d3e4790.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b252951.css",
-    "static/js/main.807ed335.js"
+    "static/css/main.19f9d383.css",
+    "static/js/main.4d3e4790.js"
   ]
 }
