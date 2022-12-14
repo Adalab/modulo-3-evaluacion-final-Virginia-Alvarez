@@ -10,7 +10,7 @@ const CharacterItem = (props) =>{
         />
         <h2 className="titleName">{props.character.name}</h2>
         <p className="paragraph">{`Especie ${props.character.specie}`}</p>
-        <Link className="characterDetail" to ={`/character/${props.character.id}`}>Ver personaje</Link>
+        <Link className="characterDetail" to ={`/character/${props.character.id}`}>Ver Personaje</Link>
     </li>
     )
 }

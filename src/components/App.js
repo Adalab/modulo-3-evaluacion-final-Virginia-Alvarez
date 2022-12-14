@@ -1,5 +1,4 @@
 import '../styles/App.scss';
-import logo from '../images/titulo.jpeg';
 import callToApi from '../services/api';
 import {Routes, Route} from 'react-router-dom';
 import { useEffect, useState} from 'react';
@@ -56,9 +55,7 @@ function App() {
 
   return (
     <div className="App">
-       <header className="header">
-        <img className="title" src={logo} alt="Rick and Morty" />
-      </header>
+       
       <main className='main'>
         <Routes>
           <Route 

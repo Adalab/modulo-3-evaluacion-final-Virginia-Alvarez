@@ -17,6 +17,7 @@ const FiltersSpecies = (props) => {
           name="All"
           value="All"
           checked={props.filterSpecie === "All"}
+          readOnly
         />
         <img data-id="All" src={iconAll} alt="Todos" title="Todos" className='radioImage' onClick={handleSelect}/>
       </label>
@@ -28,7 +29,7 @@ const FiltersSpecies = (props) => {
           name="Human"
           value="Human"
           checked={props.filterSpecie === "Human"}
-          
+          readOnly
         />
         <img data-id="Human" src={iconHuman} alt="Human" title="Human" className='radioImage' onClick={handleSelect}/>
       </label>
@@ -40,6 +41,7 @@ const FiltersSpecies = (props) => {
           name="Alien"
           value="Alien"
           checked={props.filterSpecie === "Alien"}
+          readOnly
         />
         <img data-id="Alien" src={iconAlien} alt="Alien" title="Alien" className='radioImage' onClick={handleSelect}/>
       </label>
