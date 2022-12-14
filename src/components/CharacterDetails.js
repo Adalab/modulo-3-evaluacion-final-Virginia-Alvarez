@@ -1,6 +1,8 @@
 import { Link,useParams } from "react-router-dom";
 import Morty from "./Morty";
 import characterNotFound from '../images/characterNotFound.png';
+import Header from './Header';
+
 
 const CharacterDeatils = (props) =>{
     const {characterId} = useParams();
@@ -11,7 +13,9 @@ const CharacterDeatils = (props) =>{
     if(character){
         return (
             <>
+                
                 <div className="characterContainer">
+                    <Header className="titleDetail"/>
                     <Link className="character" to='/'>Volver</Link>
                     <section className="itemDetails">
                         <img
@@ -33,6 +37,7 @@ const CharacterDeatils = (props) =>{
     } else {
         return (
             <>
+                <Header className="titleDetail"/>
                 <div className="containerNotFoundCharacter">
                     <Link className="characterBack" to='/'>Volver</Link>
                     <div className="containerNotCharacter">
