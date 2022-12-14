@@ -9,8 +9,8 @@ const CharacterItem = (props) =>{
             className="image"
         />
         <h2 className="titleName">{props.character.name}</h2>
-        <p className="paragraph">{props.character.specie}</p>
-        <Link className="character" to ={`/character/${props.character.id}`}>Ver personaje</Link>
+        <p className="paragraph">{`Especie ${props.character.specie}`}</p>
+        <Link className="characterDetail" to ={`/character/${props.character.id}`}>Ver personaje</Link>
     </li>
     )
 }

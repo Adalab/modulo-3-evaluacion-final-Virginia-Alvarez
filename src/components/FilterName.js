@@ -5,7 +5,7 @@ const FilterName = (props) =>{
     };
     return (
         <>
-            <label className="labelName" >Filtar por Nombre:</label>
+            <label className="labelName" >Nombre:</label>
             <input 
                 type="text" 
                 name="name"

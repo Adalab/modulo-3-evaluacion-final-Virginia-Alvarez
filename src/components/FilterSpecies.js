@@ -1,5 +1,5 @@
 import iconAll from '../images/Photos.png';
-import iconHuman from '../images/Reminders.png';
+import iconHuman from '../images/Mail.png';
 import iconAlien from '../images/Among-Us.png';
 
 const FiltersSpecies = (props) => {
