@@ -55,7 +55,6 @@ function App() {
 
   return (
     <div className="App">
-       
       <main className='main'>
         <Routes>
           <Route 
@@ -74,11 +73,7 @@ function App() {
         <p className='blue'>Ev.Final Virginia Álvarez   &copy;Adalab</p>
         <p className='blue'> Si, bienvenido al club, amigo</p>
       </footer>
-      
-
-      
     </div>
   );
 }
-
 export default App;

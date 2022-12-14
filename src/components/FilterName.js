@@ -1,5 +1,4 @@
 const FilterName = (props) =>{
-    
     const handleChange = (ev) =>{
         props.handleFilterName(ev);
     };
@@ -16,8 +15,6 @@ const FilterName = (props) =>{
                 placeholder ="Ej: Morty"  
             />
         </>
-
     )
 };
-
 export default FilterName;

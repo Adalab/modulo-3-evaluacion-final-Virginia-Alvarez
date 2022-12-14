@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 const CharacterItem = (props) =>{
     return (
         <li className='itemList'>
@@ -14,5 +13,4 @@ const CharacterItem = (props) =>{
     </li>
     )
 }
-
 export default CharacterItem;

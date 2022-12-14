@@ -1,10 +1,7 @@
 import CharacterItem from "./CharacterItem";
 import notFound from '../images/notFound.png';
-
-
 const CharacterList =(props)=>{
     const characterElements = props.characters.map((character)=>{
-        
         return <CharacterItem key={character.id} character={character}/>;
     });
     if (characterElements && characterElements.length >0){
@@ -22,5 +19,4 @@ const CharacterList =(props)=>{
         )
     }
     };
-
 export default CharacterList;

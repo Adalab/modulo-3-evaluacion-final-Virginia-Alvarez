@@ -3,7 +3,6 @@ import Morty from "./Morty";
 import characterNotFound from '../images/characterNotFound.png';
 import Header from './Header';
 
-
 const CharacterDeatils = (props) =>{
     const {characterId} = useParams();
     const character = props.characters.find(character =>{
@@ -13,7 +12,6 @@ const CharacterDeatils = (props) =>{
     if(character){
         return (
             <>
-                
                 <div className="characterContainer">
                     <Header className="titleDetail"/>
                     <Link className="character" to='/'>Volver</Link>
@@ -50,5 +48,4 @@ const CharacterDeatils = (props) =>{
         )
     }
 };
-
 export default CharacterDeatils;

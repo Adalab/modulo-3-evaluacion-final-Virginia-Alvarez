@@ -1,5 +1,4 @@
 import logo from '../images/titulo.jpeg';
-
 const Header = (props) =>{
     return(
         <div className={props.className} >
@@ -7,5 +6,4 @@ const Header = (props) =>{
         </div>
     )
 }
-
 export default Header;

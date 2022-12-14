@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300,700&display=swap');
-@use postcss-nested;
+// @use postcss-nested;
 
 :root {
   --border-color: #4f5352;
@@ -24,13 +24,16 @@
 }
 
 .cartoonContainerRick {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
   position: fixed;
   bottom: -50px;
+  display: none;
+  @media all and (min-width: 1024px) {
+    display: flex;
+  }
 }
 
 .cartoonContainerMorty {

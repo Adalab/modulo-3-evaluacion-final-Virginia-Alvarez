@@ -49,5 +49,4 @@ const Cartoon  = ()=>{
     </div>
     )
 }
-
 export default Cartoon;

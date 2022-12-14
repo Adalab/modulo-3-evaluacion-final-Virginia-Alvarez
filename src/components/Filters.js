@@ -2,7 +2,6 @@ import Rick from "./Rick";
 import FilterName from "./FilterName";
 import FiltersSpecies from "./FilterSpecies";
 import Header from "./Header";
-
 const Filters =(props) =>{
     const handleSubmit = (event) => {    //para impedir que en el input de filtrado, al darle a intro, la página refresque
         event.preventDefault();
@@ -17,7 +16,5 @@ const Filters =(props) =>{
             <Rick/>
         </section>
 )
-
 };
-
 export default Filters;

@@ -1,8 +1,8 @@
 const Morty  = ()=>{
     return(
-        <div className="cartoonContainerMorty">
+      <div className="cartoonContainerMorty">
           <div className="morty-container">
-    <div className="head-container">
+      <div className="head-container">
       <div className="head">
         <div className="brows-container">
           <div className="left brow"></div>
@@ -36,5 +36,4 @@ const Morty  = ()=>{
         </div>
     )
 }
-
 export default Morty;
